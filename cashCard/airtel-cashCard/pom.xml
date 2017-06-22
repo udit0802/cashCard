@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.airtel.online</groupId>
+  <artifactId>airtel-cashCard</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+	<name>airtel-cashcard Maven Webapp</name>
+  
+    <properties>
+		
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<!-- Generic properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Test -->
+		<junit.version>3.8.1</junit.version>
+
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.airtel.online</groupId>
+			<artifactId>airtel-online-cashCard</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>	
+	<build>
+		<finalName>airtel-cashCard</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+ 					<packagingIncludes>WEB-INF/classes/**,WEB-INF/lib/*.jar,WEB-INF/*.xml</packagingIncludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
